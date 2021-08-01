@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>
+  Festival of Marketing 2020 
+</title>
+<style>
+body {margin:0;font-family: "Lato",sans-serif;
+    line-height: 1.5;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  
+}
+
+.topnav{
+  /* overflow: hidden; */
+  background-color:whitesmoke;
+  z-index: 90;
+  height:120px;
+  
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 90;
+}
+
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  
+  
+  
+  }
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+ 
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f2f2f2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  
+  color: #333}
+
+.dropdown-content a:hover {
+  background-color:rgb(170, 212, 212);
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.button1 {
+background-color: #d7268b;
+color: #FFFFFF;
+text-align: center;
+border-radius: 0;
+cursor: pointer;
+
+       } 
+
+      img{
+        padding: 0px;
+        height: 520%;
+      }
+
+  .sidebar {
+  height: 35%;
+  width: 60px;
+  position: fixed;
+  z-index: 90;
+  top: 40%;
+  left: 0;
+  background-color: rgba(255,255,255,0.5);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 5px;
+  margin-left:9px;
+  font-size: 20px;
+  color: rgb(44, 6, 44);
+  display: block;
+  z-index: 90;
+}
+
+
+.intro{
+  padding: 100px 0;
+  position: relative;
+  
+  background: #46306e;
+    width: 100%;
+    
+}
+
+
+.intro::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+.panel {
+  width: 45%;
+  color: #FFFFFF;
+  font-size: 2.125rem;
+    line-height: 1.2;
+    margin-left: 410px;
+}
+
+.panel .ck-button-three {
+    background-color: transparent;
+    border: solid 2px #FFFFFF;;
+    color: #FFFFFF;
+    padding: 10px 30px!important;
+    margin-left: 200px;
+}
+.panel .ck-button-three:hover{
+  background: #d7268b;
+  color: #FFFFFF;;
+}
+
+.article__body .ck-button-two {
+    background-color: transparent;
+    border: solid 2px black;
+    color: black;
+    padding: 10px 30px!important;
+    margin-left:210px;
+    font-size: 1.125rem;
+    line-height: 1.2;
+}
+.article__body .ck-button-two:hover{
+  background:#35b5ee;
+  color:black;
+}
+.article__header__title{
+  font-size: 1.75rem;
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .cta::after{
+    display:table;
+    clear: both;
+    content: "";
+  }
+.footer {
+  background-color:#1e1531 ;
+  height: 550%;
+  width: 100%;
+  
+}
+
+.inner{
+  height: 100%;
+  width: 100%;
+  padding: 0 100px;
+}
+
+.info{
+  width: 90%;
+  height: 60%;
+  
+}
+
+.column{
+  list-style: none;
+  color: #ddd;
+  width: 33.3%;
+  float: left;
+  padding: 55px;
+}
+
+.column li{
+  padding-bottom: 15px;
+}
+
+.column p{
+  font-weight: 700;
+  font-size: 1.5em; 
+  line-height: 1.2;
+  
+}
+
+.footer__alt{
+  width: 100%;
+  height: 35%;
+}
+.footer__links {
+  width: 25%;
+  height: 80%;
+ 
+}
+
+.altlink{
+  
+  float: left;
+  font-size: 15px;
+  color: white;
+}
+
+.altlink li{
+  list-style:none;
+}
+
+.ul link{
+  height:80%;
+}
+
+.cta{
+  position: relative;
+    overflow: hidden;
+    align-items: center; 
+    height: 310px;
+    background-color: #7559b1;
+    background-image: url(https://themes.asp.events/festivalofmarketing2020/includes/images/pattern_purple.svg);
+    text-align: center;
+    line-height: 0;
+}
+
+.cta img{
+  width: 280px;
+  height: 320px;
+  float: left;
+}
+
+.article__header::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+.article__body::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  background-color:black;
+  margin-left: 270px;
+  background-image:url(https://themes.asp.events/festivalofmarketing2020/includes/images/pattern_01-opacity-015.svg);
+  background-color: #29dcc5;
+  
+}
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.mySlides{
+  color: #f1f1f1;
+  padding: 12% 20px 0;
+  line-height: 1.4!important;
+    font-family: "museo-slab",sans-serif;
+    margin-bottom: 0em;
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+
+
+div.gallery:hover {
+  box-shadow: 1px solid red;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gallery__section{
+  width: 1500px;
+  height: 1000px;
+  margin-left:120px; 
+}
+
+.gallery ul{
+  float: left;
+}
+
+.m-galleries .li{
+  text-decoration: none;
+}
+
+.flex-container{
+  display: flex;
+  height: 1000px;
+  width: 1200px;
+  margin-left: 150px;
+  
+}
+.flex-container > div{
+  background-color: aqua;
+  margin: 25px;
+  
+  height: 500px;
+  width: 800px;
+  }
+
+
+  .flex-container > div img{
+    height: 250px;
+    width: 250px;
+    padding: 0%   ;
+  }
+
+  .flex-container::after{
+   display: table;
+   content: "";
+   clear: both;}
+/* .footer__logo{
+  margin-left:400px;
+}
+
+.panel__body{
+  height: 30%;
+  width: 25%;
+  margin-bottom: 70px;
+} */
+
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <div class="panel__body"> 
+    <p><a href="welcome" target="_self" title="welcome"><img alt="FoM logo" src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/logos/FOM18_CMYK_No-Date-Landscape_No-Date-Landscape.png" style="width: 340px; height: 91px; margin-left: 120px;" /></a></p> 
+    </div> 
+    
+  <div class="dropdown" style="margin-left: 270px; margin-top: 45px;">
+      
+    <button class="dropbtn">About
+      
+    </button>
+    <div class="dropdown-content">
+      <a href="#advisoryboard">Advisory Board</a>
+      <a href="#diversity&inclusion">Diversity&Inclusion</a>
+      <a href="#2020sponsors&partners">2020 Sponsor&Partners</a>
+    </div>
+  </div> 
+  <div class="dropdown" style="margin-top: 45px">
+    <button class="dropbtn">Attend
+      
+    </button>
+    <div class="dropdown-content">
+      <a href="#whyfestival">Why Festival?</a>
+      <a href="#festivalondemand">Festival on Demand</a>
+      <a href="#community">Community</a>
+    </div>
+  </div> 
+  <div class="dropdown" style="margin-top: 45px">
+    <button class="dropbtn">Agenda
+      
+    </button>
+    <div class="dropdown-content">
+      <a href="#2020agenda">2020 Agenda</a>
+      <a href="#2020streams">2020 Streams</a>
+      <a href="#2020speakers">2020 Speakers</a>
+    </div>
+  </div> 
+  <div class="dropdown" style="margin-top: 45px">
+    <button class="dropbtn">Help
+      
+    </button>
+    <div class="dropdown-content">
+      <a href="#getintouch">Get in Touch</a>
+      <a href="#speakerenquiry">Speaker Enquiry</a>
+      <a href="#partnershipenquiry">Partnership Enquiry</a>
+    </div>
+  </div> 
+   <div class="dropdown" style="margin-top: 45px">
+    <button class="dropbtn">Festival Blog
+    </button>
+	<div class="dropdown-content">
+      <a href="#festivalblog">Festival Blog</a>
+      <a href="#bloksignup">Blok Sign Up</a>
+
+      
+      
+    </div>
+    
+  
+</div>
+<div class="header-cta" > 
+             
+  <a class="button1" style="color:white; margin-top: 45px; padding: 15px;">REGISTER YOUR INTEREST</a>
+</div>
+
+<img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/FOM20_09977_Speakers_Banner-1200-630.gif" style="width: 80%; margin-left: 110px;" alt="">
+
+
+<div class="sidebar">
+  <a href="https://www.instagram.com/festofmarketing/"><i class="fa fa-fw fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/company/festival-of-marketing"><i class="fa fa-fw fa-linkedin"></i> </a>
+  <a href="https://twitter.com/FestofMarketing"><i class="fa fa-fw fa-twitter"></i> </a>
+  <a href="https://www.facebook.com/festofmarketing"><i class="fa fa-fw fa-facebook"></i> </a>
+  <a href="https://www.youtube.com/channel/UCThxseXqitv1UPBCfM-YJzg"><i class="fa fa-fw fa-youtube"></i> </a>
+  <a href="https://www.festivalofmarketing.com/"><i class="fa fa-fw fa-search"></i> </a>
+</div>
+
+<div class="intro"> 
+  <div class="panel">
+  <p style="text-align: center;">The Festival of Marketing is a unique experience where ambitious marketers can discover, learn, celebrate and shape the future together.</p> 
+  <p style="text-align: center;"><a class="ck-button-three" href="register-your-interest" target="_self" title="register-your-interest">REGISTER YOUR INTEREST</a></p> 
+ </div> 
+</div> 
+
+
+ <div class="article__header" > 
+  <h3 class="article__header__title"> <p style="text-align: center;">What happened at FoM20?</p> </h3> 
+ </div> 
+ <div class="article__body" style="width: 48%; margin: auto;" > 
+  <p style="text-align: center;">The Festival of Marketing went digital, delivering a&nbsp;week-long series of&nbsp;online sessions and gathering an unrivalled collection of global speakers from internationally renowned brands to address the five biggest issues faced by marketers and their brands. Festival-goers gained leading edge insight, inspiration and the learnings required to meet the challenges that lie ahead.</p> 
+  <p style="text-align: center;">Don't miss the next Festival experience, register your interest to receive our updates.</p> 
+  <p style="text-align: center;"><a class="ck-button-two" href="register-your-interest" target="_self" title="register-your-interest" >REGISTER YOUR INTEREST</a></p> 
+ </div> 
+ 
+
+
+
+ 
+
+
+
+
+
+ <div class="gallery__section">
+ <h6 style="margin-left: 150px;font-size: 1.75rem; line-height: 1.2;">Here are a few snaps from #FoM20's session filming at Tobacco Dock</h6>
+<div class="responsive">
+  <ul class="m-galleries"  > 
+    <li class="m-galleries-list" style="float: left;"> 
+     <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B81834-ASVB5207.jpg/fit-in/250x250/filters:no_upscale()" alt=""  style="width: 600px;  height: 400px;"> 
+      <li class="m-galleries-list" style="float: left;"> 
+        <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B76C9B-ASVB5413.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+          <li class="m-galleries-list" style="float: left;"> 
+            <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B7347B-ASVB5316.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+              <li class="m-galleries-list" style="float: left;"> 
+                <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/E4C2515D-ASVB5033.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+               
+             
+                  <li class="m-galleries-list" style="float: left;"> 
+                    <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B748D0-ASVB5392.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+                      <li class="m-galleries-list" style="float: left;"> 
+                        <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B75A61-ASVB5367.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px;"> 
+                          <li class="m-galleries-list" style="float: left;"> 
+                            <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B77EB8-ASVB5008.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+                              <li class="m-galleries-list" style="float: left;"> 
+                                <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B7A3DC-ASVA0114.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+                                  <li class="m-galleries-list" style="float: left;"> 
+                                    <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B79056-ASVA0014.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px;"> 
+                                      <li class="m-galleries-list" style="float: left;"> 
+                                        <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B706AF-ASVB5267.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+                                          <li class="m-galleries-list" style="float: left;"> 
+                                            <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B7B5A6-ASVA0097.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px;"> 
+                                              <li class="m-galleries-list" style="float: left;"> 
+                                                <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B7C74A-ASVA0134.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+                                                  <li class="m-galleries-list" style="float: left;"> 
+                                                    <div class="m-galleries-list__items"><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/galleries/2020-tobacco-dock/53B7E06C-ASVA0088.jpg/fit-in/250x250/filters:no_upscale()" alt="" style="width: 300px;  height: 200px; "> 
+</div>
+</div>
+</ul>
+</div>
+
+
+<div class="flex-container">
+  <div><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/libraries/festival-blog-2020/Matthew-Bushby.jpg/fit-in/500x500/filters:no_upscale()" alt=""></div>
+  <div><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/libraries/festival-blog-2020/Heart-.jpg/fit-in/500x500/filters:no_upscale()" alt=""></div>
+  <div><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/libraries/festival-blog-2020/ella-damato.jpg/fit-in/500x500/filters:no_upscale()" alt=""></div>
+  <div><img src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/libraries/festival-blog-2020/NileRodgersFOM.jpg/fit-in/500x500/filters:no_upscale()" alt=""></div>
+  <!-- <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div> -->
+ 
+
+
+
+
+
+
+
+
+
+
+</div>
+ 
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+<div class="slideshow-container"><img src="https://themes.asp.events/festivalofmarketing2020/includes/images/cta_5.png" style="width: 40%; height: 100%; float: right;"            alt="">
+
+  <div class="mySlides fade">
+    
+    <p>"You'll remember why you fell in love with marketing and leave inspired!"</p>
+    <p>CAMPAIGN MANAGER</p>
+    <p>TRUSTEDHOUSESITTERS</p>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <p>"A must for marketers at what ever level within their business, it gives you the levels of exposure to the big businesses and latest ideas and concepts that can be taken and applied to companies of all shapes and sizes."</p>
+    <p>MARKETING MANAGER</p>
+    <p>MICHELIN TYRE PLC</p>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img_nature_wide.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="img_nature_wide.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="img_nature_wide.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="img_nature_wide.jpg" style="width:100%">
+    
+  </div>
+  
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  </body>
+  </html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="cta">
+  <img src="https://themes.asp.events/festivalofmarketing2020/includes/images/cta_5.png" style=" float: right; height: 320px; width: 280px; margin-left: 100px;" alt="">
+   <img src="https://themes.asp.events/festivalofmarketing2020/includes/images/cta_6.png" alt="">
+  <div class="panel">
+<div class="panel__header"> 
+<h4 class="panel__header__title" style="font-size: 3.125rem;
+line-height: 1.2;"> Festival of Marketing </h4> 
+</div> 
+<div class="panel__body"> 
+<p style="text-align: center;">An experience like no other</p> 
+<p style="text-align: center;"><a class="button1" style="color:white; margin-left: 180px; " href="register-your-interest" target="_self" title="register-your-interest">REGISTER YOUR INTEREST</a></p>
+
+</div> 
+
+  </div>
+</div>
+ 
+
+ 
+  
+ 
+  
+ <div class="footer">
+  <div class="inner">
+    <div class="info">
+      <div class="column">
+        <p>About the Festival</p>
+          <li>Why Attend</li>
+          <li>2020 Agenda</li>
+          <li>2020 Speakers</li>
+      </div>
+    
+  
+
+    <div class="column">
+      <p>Get in Touch</p>
+        <li>Get in Touch</li>
+        <li>Partnership Enquiry</li>
+        <li>Speaking Enquiry</li>
+    </div>
+
+    <div class="column">
+      <p><img alt="Logo" src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/build_assets/footer_fom_logo.png" style="width: 200px; height: 48px;" /></p> 
+      <p>Digital delivery supported by:</p> 
+      <p><a href="https://identitygroup.co.uk/" target="_blank" title="https://identitygroup.co.uk/"><img alt="Identity" src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/Identity.jpg" style="width: 90px; height: 90px; margin-top: 0px;" /></a></p> 
+    </div>
+
+    </div>
+
+
+    <div class="footer__alt">
+      <div class="footer__links">
+        <ul class="link">
+          <span class="altlink"> Copyright © 2020</span>
+          <li title="Registered in England and Wales with number 05243851 Registered office at Floor M, 10 York Road, London SE1 7ND" >
+          <span class="altlink">Registered in England and Wales with number 05243851 Registered office at Floor M, 10 York Road, London SE1 7ND</span>
+          </li><li title=" Website Terms &amp; Conditions" >
+          <a href="https://www.centaurmedia.com/terms-and-conditions/" style="font-size: 15px; color: white; padding: 0%;" > Website Terms & Conditions</a>
+          </li><li title=" Privacy Policy" >
+          <a href="https://www.centaurmedia.com/privacy/" style="font-size: 15px; color: white; padding: 0%;">&nbsp; Privacy Policy</a>
+          </li><li title=" Delegate Terms and Conditions" >
+          <a href="delegate-terms-and-conditions" style="font-size: 15px; color: white; padding: 0%;"> Delegate Terms and Conditions</a>
+        </li></ul> 
+          <div class="footer__logo">
+            <!-- <div class="panel__body"> 
+            <p><img alt="Xeim" src="https://cdn.asp.events/CLIENT_Centaur__7F38F88B_5056_B739_54016D1C4201EEE1/sites/FOM-2020/media/XEIM.png" style="margin-bottom: 40px;" /></p> 
+            </div>  -->
+          </div>
+  
+      
+      
+      
+      
+     
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+</body>
+</html>
